@@ -28,6 +28,7 @@ public class CFModel {
     private String number;
 
     @PostConstruct
+    
     protected void init() {
 
         try {
