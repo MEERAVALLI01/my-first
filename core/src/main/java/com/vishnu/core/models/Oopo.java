@@ -26,5 +26,6 @@ public class Oopo {
 
     public String getLaptop(){
         return laptop;
+        
     }
 }
