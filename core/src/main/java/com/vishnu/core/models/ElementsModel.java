@@ -22,7 +22,7 @@ public class ElementsModel {
     @ValueMapValue
     private String ariaLabel;
 
-    public List<ElementItem> getElements() {
+    public List<ElementItem> getElements(){
         return elements;
     }
 
