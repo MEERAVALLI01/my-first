@@ -1,0 +1,19 @@
+<sly data-sly-use.model="com.vishnu.core.models.ElementsModel" />
+
+
+<div data-sly-list.item="${model.elements}">
+
+    <div class="element-item">
+
+       
+
+        <!-- Link with checkbox-based target -->
+        <a href="${item.link @ extension='html'}"
+           target="${item.checkbox ? '_blank' : '_self'}"
+           rel="${item.checkbox ? 'noopener noreferrer' : ''}">
+            ${item.linkTitle}
+        </a>
+
+    </div>
+
+</div>

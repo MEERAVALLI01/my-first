@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/tabs">
+        <items jcr:primaryType="nt:unstructured">
+            <elements
+                jcr:primaryType="nt:unstructured"
+                jcr:title="ELEMENTS"
+                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                composite="{Boolean}true"
+                fieldLabel="Elements">
+                <field
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    name="./elements">
+                    <items jcr:primaryType="nt:unstructured">
+                        <linkTitle
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Link Title"
+                            name="./linkTitle"/>
+                        <link
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            fieldLabel="Link"
+                            name="./link"/>
+                        <checkbox
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Box"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            fieldLabel="Open in New Tab"
+                            name="./checkbox"
+                            uncheckedValue="{Boolean}false"
+                            value="{Boolean}true"/>
+                    </items>
+                </field>
+            </elements>
+            <accessibilityTab
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Accessibility"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <ariaLabel
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="ARIA Label"
+                        name="./ariaLabel"/>
+                </items>
+            </accessibilityTab>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,28 @@
+<sly data-sly-use.cf="com.vishnu.core.models.CFModel" />
+
+<div class="cf-component">
+
+    <!-- Debug (remove later) -->
+    <p>Fragment Path: ${cf.fragmentPath}</p>
+
+    <!-- Text Field -->
+    <h2 data-sly-test="${cf.text}">
+        ${cf.text}
+    </h2>
+
+    <!-- Image Field -->
+    <div data-sly-test="${cf.image}">
+        <img src="${cf.image}" alt="Content Fragment Image"/>
+    </div>
+
+    <!-- Number Field -->
+    <p data-sly-test="${cf.number}">
+        ${cf.number}
+    </p>
+
+    <!-- If nothing available -->
+    <p data-sly-test="${!cf.text && !cf.image && !cf.number}">
+        No Content Fragment Data Found
+    </p>
+
+</div>

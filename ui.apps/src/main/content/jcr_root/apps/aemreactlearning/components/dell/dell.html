@@ -1,0 +1,67 @@
+<nav class="DELL tab-navigation--default"
+     aria-label="Main site navigation"
+     role="navigation">
+
+    <!-- AC2: Left arrow - hidden by default, shown when tabs overflow -->
+    <button class="tab-navigation__arrow tab-navigation__arrow--left"
+            aria-label="Scroll tabs left"
+            aria-hidden="true"
+            type="button">
+        &#8249;
+    </button>
+
+    <!-- EP1: composite multifield loop → each tab item -->
+    <ul class="tab-navigation__list" role="tablist">
+
+        <!-- EP1.1 = linkTitle (tab label), EP1.2 = link (href), target="_self" = AC1.3 -->
+        <li class="tab-navigation__item" role="presentation">
+            <a class="tab-navigation__link active"
+               href="/content/home"
+               target="_self"
+               role="tab"
+               aria-selected="true">
+                Home
+            </a>
+        </li>
+
+        <li class="tab-navigation__item" role="presentation">
+            <a class="tab-navigation__link"
+               href="/content/products"
+               target="_self"
+               role="tab"
+               aria-selected="false">
+                Products
+            </a>
+        </li>
+
+        <li class="tab-navigation__item" role="presentation">
+            <a class="tab-navigation__link"
+               href="/content/services"
+               target="_self"
+               role="tab"
+               aria-selected="false">
+                Services
+            </a>
+        </li>
+
+        <li class="tab-navigation__item" role="presentation">
+            <a class="tab-navigation__link"
+               href="/content/about"
+               target="_self"
+               role="tab"
+               aria-selected="false">
+                About Us
+            </a>
+        </li>
+
+    </ul>
+
+    <!-- AC2: Right arrow - hidden by default, shown when tabs overflow -->
+    <button class="tab-navigation__arrow tab-navigation__arrow--right"
+            aria-label="Scroll tabs right"
+            aria-hidden="true"
+            type="button">
+        &#8250;
+    </button>
+
+</nav>

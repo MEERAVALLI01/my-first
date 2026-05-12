@@ -1,0 +1,58 @@
+ <sly data-sly-use.model="com.vishnu.core.models.ContentFragmentModel"/>
+
+<select id="cfDropdown" onchange="showFragment()">
+
+    <option value="">Select Content Fragment</option>
+
+    <sly data-sly-test="${model.fragments}">
+        <sly data-sly-list.fragment="${model.fragments}">
+            <option value="${fragment.name}">
+                ${fragment.name}
+            </option>
+        </sly>
+    </sly>
+
+</select>
+ 
+
+<div id="cfData">
+
+    <sly data-sly-list.fragment="${model.fragments}">
+        <div class="fragmentData"
+             data-name="${fragment.name}"
+             data-text="${fragment.text}"
+             data-field="${fragment.field}"
+             style="display:none">
+        </div>
+    </sly>
+
+    <p id="textValue"></p>
+    <div id="fieldValue"></div>
+
+</div>
+
+
+<script>
+
+function showFragment(){
+
+    var selected = document.getElementById("cfDropdown").value;
+    var fragments = document.querySelectorAll(".fragmentData");
+
+    fragments.forEach(function(f){
+
+        if(f.dataset.name === selected){
+
+            document.getElementById("textValue").innerHTML =
+                "Text : " + f.dataset.text;
+
+            document.getElementById("fieldValue").innerHTML =
+                "Field : " + f.dataset.field;
+
+        }
+
+    });
+
+}
+
+</script>

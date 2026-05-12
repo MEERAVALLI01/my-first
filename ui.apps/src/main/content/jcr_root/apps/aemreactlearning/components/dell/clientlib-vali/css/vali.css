@@ -1,0 +1,117 @@
+/* ── Base nav wrapper ── */
+.tab-navigation {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    border-bottom: 2px solid #e2e8f0;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* ── EP1 multifield → tab list ── */
+.tab-navigation__list {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.tab-navigation__item {
+    flex-shrink: 0;
+}
+
+/* ── EP1.1 = tab title | EP1.2 = href | target=_self → AC1.3 ── */
+.tab-navigation__link {
+    display: block;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.tab-navigation__link:hover {
+    color: #1e40af;
+    background: #f0f4ff;
+}
+
+.tab-navigation__link.active,
+.tab-navigation__link[aria-selected="true"] {
+    color: #1e40af;
+    border-bottom-color: #1e40af;
+    font-weight: 600;
+}
+
+/* ── AC2: Overflow arrows - hidden by default ── */
+.tab-navigation__arrow {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    background: #fff;
+    border: none;
+    border-bottom: 2px solid #e2e8f0;
+    margin-bottom: -2px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #475569;
+    flex-shrink: 0;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+.tab-navigation__arrow:hover {
+    background: #f0f4ff;
+    color: #1e40af;
+}
+
+/* JS adds this class when overflow detected → arrows show (AC2) */
+.tab-navigation--overflow .tab-navigation__arrow {
+    display: flex;
+}
+
+/* ── Visual Variations (./visualStyle select values) ── */
+
+/* default - already styled above */
+
+/* primary */
+.tab-navigation--primary .tab-navigation__link.active {
+    color: #1e40af;
+    border-bottom-color: #1e40af;
+}
+
+/* secondary */
+.tab-navigation--secondary .tab-navigation__link.active {
+    color: #7c3aed;
+    border-bottom-color: #7c3aed;
+}
+.tab-navigation--secondary .tab-navigation__link:hover {
+    background: #faf5ff;
+}
+
+/* minimal */
+.tab-navigation--minimal {
+    border-bottom: none;
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 4px;
+}
+.tab-navigation--minimal .tab-navigation__link {
+    border-bottom: none;
+    border-radius: 6px;
+    margin-bottom: 0;
+}
+.tab-navigation--minimal .tab-navigation__link.active {
+    background: #fff;
+    border-bottom: none;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
