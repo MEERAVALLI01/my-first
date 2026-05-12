@@ -29,7 +29,8 @@ public class ContactModel {
                 list.add(child);
             }
         }
-    }
+    } 
+    // test
 
     public List<Resource> getList() {
         return list;

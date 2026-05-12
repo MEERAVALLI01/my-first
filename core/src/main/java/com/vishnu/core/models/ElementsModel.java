@@ -15,7 +15,7 @@ import org.apache.sling.models.annotations.Via;
 )
 public class ElementsModel {
     
-    @ChildResource(name = "elements")
+    @ChildResource(name ="elements")
     @Via("resource")
     private List<ElementItem> elements;
 
