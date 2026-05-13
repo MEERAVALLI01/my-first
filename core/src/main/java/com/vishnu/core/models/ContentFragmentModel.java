@@ -37,7 +37,7 @@ public class ContentFragmentModel {
                 Resource master = resolver.getResource(child.getPath()
                         + "/jcr:content/data/master");
 
-                if (master != null) {
+                if (master != null){
 
                     FragmentData data = new FragmentData();
 
