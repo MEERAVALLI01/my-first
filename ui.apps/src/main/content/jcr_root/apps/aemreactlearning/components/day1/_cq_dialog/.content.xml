@@ -11,11 +11,11 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-                    <laptop
+                    <lap
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldLabel="LapTop"
-                        name="./laptop"/>
+                        name="./lap"/>
                 </items>
             </column>
         </items>

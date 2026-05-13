@@ -14,7 +14,7 @@
                 name="./country">
                 <datasource
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="aemapiproject/datasource/countries"/>
+                    sling:resourceType="aemreactlearning/datasource/countries"/>
             </country>
         </items>
     </content>
