@@ -26,7 +26,7 @@ public class ElementsModel {
         return elements;
     }
 
-    public String getAriaLabel() {
+    public String getAriaLabel(){
         return ariaLabel;
     }
 }
